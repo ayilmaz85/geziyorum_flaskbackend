@@ -4,6 +4,7 @@ from geziyorum.initialize_db import createDB
 from flask_cors import CORS
 from api.users import apiUsers
 from api.employees import apiEmployees
+from api.products import apiProducts
 
 
 app = createApp()
@@ -12,7 +13,7 @@ createDB()
 
 app.register_blueprint(apiUsers)
 app.register_blueprint(apiEmployees)
-# app.register_blueprint(apiAdmins)
+app.register_blueprint(apiProducts)
 # app.register_blueprint(apiCategories)
 
 

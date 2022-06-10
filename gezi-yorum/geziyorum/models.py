@@ -1,5 +1,4 @@
 from dataclasses import dataclass
-from tkinter import LAST
 from geziyorum import db
 
 
@@ -65,5 +64,6 @@ class Employees(db.Model):
     
     @classmethod
     def get_all_employees(cls):
+        
         return cls.query.all()
        
